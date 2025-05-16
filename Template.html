@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Email Signature Template</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      padding: 20px;
+    }
+
+    .container {
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .header {
+      font-size: 18px;
+      font-weight: bold;
+      background-color: #f3f3f3;
+      padding: 10px 15px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .body-content {
+      padding: 20px 15px;
+      line-height: 1.6;
+    }
+
+    .body-content b {
+      font-size: 16px;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #2c2c2c;
+      color: white;
+      padding: 10px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .footer {
+      margin-top: 20px;
+      background: linear-gradient(to bottom, #ececec, #cfcfcf);
+      padding: 15px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .footer p {
+      margin: 5px 0;
+    }
+
+    .footer small {
+      display: block;
+      font-size: 12px;
+      color: #666;
+      margin-top: 10px;
+    }
+
+    .footer a {
+      color: #333;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    {{first_name}}, Please Include Your Electronic Signature
+  </div>
+
+  <div class="body-content">
+    <p><b>Hello {{first_name}},</b></p>
+    <p>
+      Proceed with your application by adding your electronic signature, which will validate all of the documents you have submitted. To add your signature, click the following link.
+    </p>
+    <a href="#" class="button">Add E-Signature</a>
+  </div>
+
+  <div class="footer">
+    <p><strong>Name :</strong> {{first_name}} {{last_name}}</p>
+    <p><strong>Email :</strong> {{email}}</p>
+
+    <small>
+      This notification email has been sent to you at {{email}}. To unsubscribe, please click 
+      <a href="#">here</a> or our address is: <br>
+      1309 E 3rd Ave Suite 202 Durango, CO 81301
+    </small>
+  </div>
+</div>
+
+</body>
+</html>
