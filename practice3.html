@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document Upload Reminder</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 20px auto;
+      background: #ffffff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .header {
+      text-align: center;
+      padding: 20px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .date-bar {
+      background: #c7bfaf;
+      text-align: center;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 0 0 10px 10px;
+    }
+
+    .highlight-bar {
+      background: #ede9e0;
+      padding: 10px;
+      border-radius: 15px;
+      margin: 0 auto;
+      max-width: 80%;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .content {
+      padding: 20px;
+      font-size: 15px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .info-box {
+      background: #a99b7d;
+      color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 0 20px;
+    }
+
+    .info-box div {
+      margin-bottom: 10px;
+    }
+
+    .info-label {
+      font-weight: bold;
+      display: inline-block;
+      width: 130px;
+    }
+
+    .view-link {
+      color: #000;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .upload-btn {
+      display: block;
+      margin: 30px auto;
+      padding: 10px 30px;
+      background: #a99b7d;
+      color: #fff;
+      font-weight: bold;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+    }
+
+    .footer {
+      font-size: 12px;
+      text-align: center;
+      color: #333;
+      padding: 20px;
+      background: #f9f9f9;
+      border-top: 1px solid #ccc;
+    }
+
+    .footer a {
+      color: #333;
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: 480px) {
+      .info-label {
+        width: 100%;
+        display: block;
+        margin-bottom: 5px;
+      }
+      .info-box {
+        margin: 0 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      Hello {{first_name}}
+    </div>
+
+    <div class="date-bar">
+      <div class="highlight-bar">
+        Date: {{ocx_month_name}} {{ocx_day}}, {{ocx_year}}
+      </div>
+    </div>
+
+    <div class="content">
+      This email is meant to let you know that in order for the application to proceed, a few documents must be uploaded. This is the best time to complete the procedure and get the desired outcome on time.
+    </div>
+
+    <div class="info-box">
+      <div>
+        <span class="info-label">Name:</span>
+        {{first_name}} {{last_name}}
+      </div>
+      <div>
+        <span class="info-label">Email:</span>
+        {{email}}
+      </div>
+      <div>
+        <span class="info-label">Pending Documents:</span>
+        <a href="#" class="view-link">VIEW HERE</a>
+      </div>
+    </div>
+
+    <button class="upload-btn">UPLOAD</button>
+   
+    <div class="footer">
+      This notification email has been sent to you at {{email}}. To unsubscribe, please click <a href="#">here</a> or our address is:<br>
+      1309 E 3rd Ave Suite 202 Durango, CO 81301
+    </div>
+  </div>
+
+</body>
+</html>
